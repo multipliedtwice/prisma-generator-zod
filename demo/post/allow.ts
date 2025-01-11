@@ -1,0 +1,20 @@
+export const schema = {
+  model: 'post',
+  fields: [
+    'select.id',
+    'select.title',
+    'select.content',
+    'select.createdAt',
+    'select.author.select.id',
+    'select.author.select.name',
+    'where.author.name',
+    'where.author.email',
+    'where.OR[].title',
+    'where.OR[].content',
+    'where.NOT[].createdAt',
+    'where.content.contains',
+    'where.content.startsWith',
+    'where.content.endsWith',
+    'where.content.search',
+  ],
+};
