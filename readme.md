@@ -17,20 +17,20 @@ A TypeScript utility to generate lean Zod schemas from your Prisma models based 
 You can install this package via npm:
 
 ```bash
-npm install zod-prisma-schema-generator
+npm install prisma-generator-zod
 ```
 
 Or with Yarn:
 
 ```bash
-yarn add zod-prisma-schema-generator
+yarn add prisma-generator-zod
 ```
 
 ## Usage
-__Step 1__: Prepare Your Prisma Schema
+### __Step 1__: Prepare Your Prisma Schema
 Ensure you have a schema.prisma file in your project root or specify its location when running the generator.
 
-__Step 2__: Define Allowed Paths and Synonyms
+### __Step 2__: Define Allowed Paths and Synonyms
 In your TypeScript files where you want to generate schemas, define an object with the allowed paths and synonyms. For example:
 
 ```typescript
@@ -80,15 +80,16 @@ const schema = {
 schema: The name of the Prisma model you want to generate a Zod schema for.
 fields: An array of strings specifying the paths to the fields you want to include.
 synonyms: (Optional) A mapping of custom field types to Prisma model names.
-__Step 3__: Run the Generator
+
+### __Step 3__: Run the Generator
 You can run the generator using the following command:
 
 ```bash
-npx zod-prisma-schema-generator [search-directory]
+npx prisma-generator-zod [search-directory]
 ```
 search-directory: (Optional) The directory where your TypeScript files with the schema definitions are located. Defaults to src.
 
-__Step 4__: Import the Generated Schemas
+### __Step 4__: Import the Generated Schemas
 After running the generator, it will create new TypeScript files with the Zod schemas in the same directory as your schema definitions. You can import and use them as follows:
 
 ```typescript
